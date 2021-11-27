@@ -1,4 +1,5 @@
 import 'package:car_inspect/presentation/controllers/car_inspect_controller.dart';
+import 'package:car_inspect/presentation/views/widgets/category_detail_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -66,6 +67,18 @@ class _InspectScreenState extends State<InspectScreen>
               isScrollable: true,
               tabs: _buildTabs(),
               controller: _tabController,
+            ),
+          ),
+          Expanded(
+            child: ListView.builder(
+              padding: const EdgeInsets.all(12.0),
+              itemCount: _inspectController.inspectInfo!.listCategories!.length,
+              itemBuilder: (BuildContext context, int index) {
+                return CategoryDetailTile(
+                  category:
+                      _inspectController.inspectInfo!.listCategories![index],
+                );
+              },
             ),
           ),
         ],

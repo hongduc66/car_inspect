@@ -8,15 +8,15 @@ part of 'section_summary.dart';
 
 SectionSummary _$SectionSummaryFromJson(Map<String, dynamic> json) {
   return SectionSummary(
-    notAvailableCount: json['not_available_count'] as int?,
-    failCount: json['fail_count'] as int?,
-    passCount: json['pass_count'] as int?,
+    notAvailableCount: json['n\/a'] as int?,
+    failCount: json['fail'] as int?,
+    passCount: json['pass'] as int?,
   );
 }
 
 Map<String, dynamic> _$SectionSummaryToJson(SectionSummary instance) =>
     <String, dynamic>{
-      'not_available_count': instance.notAvailableCount,
-      'fail_count': instance.failCount,
-      'pass_count': instance.passCount,
+      'n\/a': instance.notAvailableCount,
+      'fail': instance.failCount,
+      'pass': instance.passCount,
     };
