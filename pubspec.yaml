@@ -1,0 +1,29 @@
+name: car_inspect
+description: Intern test project.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  google_fonts: any
+  get: ^4.3.8
+  cached_network_image: ^3.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner:
+  json_serializable:
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/mock_data.json
